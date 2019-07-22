@@ -1,0 +1,39 @@
+<template>
+  <div class="imagefill" v-if="src" :style="{ backgroundImage: 'url(' + src + ')' }">
+    <span class="overlay" :style="{ backgroundColor: overlayColor }" v-if="overlayColor.toLowerCase() != 'transparent'" />
+    <slot />
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    src: {
+      type: String,
+      required: true
+    },
+    overlayColor: {
+      default: 'transparent'
+    }
+  },
+}
+
+</script>
+
+<style lang="stylus">
+
+.imagefill
+  position: relative
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  display: inline-block
+  width: 100%
+  .overlay
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+
+</style>

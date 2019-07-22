@@ -1,0 +1,27 @@
+language: Deutsch
+
+title: aztemi.com
+subtitle: Online site of AZTemi.com
+description: Website of AZTemi.com
+keywords: AZTemi Temi Temitope Akinbosoye Zaimoglu Dunkel
+allRightsReserved: All rights reserved
+businessAddress: Koepperner Str. 28,<br />61381 Friedrichsdorf,<br />(Frankfurt Area),<br />Germany
+
+theme:
+  dark: Dunkel
+  light: Light
+  hint: Hell/Dunkel
+
+menu:
+  home: Home
+  services: Services
+  resources: Resources
+  contact: Contact Us
+  follow: Follow Us
+
+policy:
+  privacy: privacy policy
+  imprint: Impressum
+
+pages:
+  about: Über Seite

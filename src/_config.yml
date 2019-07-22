@@ -1,0 +1,23 @@
+# Site Settings
+name: AZTemi
+url: www.aztemi.com
+favicon: /icons/favicon.png
+timezone: UTC
+disqus_shortname:
+google_analytics:
+github: https://github.com/t4top/
+
+# feeds
+feed:
+  rss: /rss.xml
+  atom: /atom.xml
+
+# languages support
+# Use only ISO 639-1 Language Codes (https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
+default_language: en
+fallback_language: en
+supported_languages:
+  - en
+  - bg
+  - de
+  - ja

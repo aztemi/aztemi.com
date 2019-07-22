@@ -1,0 +1,44 @@
+{
+  "name": "aztemi.com",
+  "version": "0.1.0",
+  "description": "Website of AZTemi built with VuePress",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src",
+    "preview": "yarn build && http-server ./build --cors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t4top/aztemi-com.git"
+  },
+  "keywords": [
+    "vuepress",
+    "AZTemi",
+    "aztemi.com"
+  ],
+  "author": "t4top (https://github.com/t4top)",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/t4top/aztemi-com/issues"
+  },
+  "homepage": "https://github.com/t4top/aztemi-com",
+  "dependencies": {
+    "@types/js-yaml": "^3.12.1",
+    "@types/store": "^2.0.2",
+    "js-yaml": "^3.13.1",
+    "store": "^2.0.12",
+    "vue-i18n": "^8.11.2",
+    "vue-meta": "^2.0.4",
+    "@vuepress/plugin-active-header-links": "^1.0.1",
+    "@vuepress/plugin-back-to-top": "^1.0.1",
+    "@vuepress/plugin-blog": "latest",
+    "@vuepress/plugin-medium-zoom": "^1.0.1",
+    "@vuepress/plugin-nprogress": "^1.0.1",
+    "@vuepress/plugin-pwa": "^1.0.1",
+    "vuepress": "next",
+    "vuex": "^3.1.1"
+  },
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  }
+}
