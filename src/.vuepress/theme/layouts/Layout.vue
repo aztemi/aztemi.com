@@ -1,8 +1,6 @@
 <template>
   <LayoutWrapper>
-    <div class="content">
-        <Content/>
-    </div>
+    <Content class="theme_content" />
   </LayoutWrapper>
 </template>
 
@@ -17,12 +15,14 @@ export default {
 
 <style lang="stylus">
 
-.content
+.theme_content
+  position: relative
   padding: 2rem 1.5rem
   @media $mq_tablet
     padding: 3rem 2rem
   p
     margin: 1rem 0
+    color: var(--color_on_background)
   h1, h2, h3, h4, h5, h6
     margin-top: 3rem
     &:first-child

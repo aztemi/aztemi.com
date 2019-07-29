@@ -1,12 +1,15 @@
 ---
-layout: Page
+layout: LayoutCopy
 title: Contact Us
 ---
+
+## Get in Touch
+
 <div id="md_contact_index">
   <div class="cards">
   <div class="card">
 
-  ### Get in Touch
+  ### Contact Form
 
   <ContactForm action="https://script.google.com/macros/s/AKfycbyTQbtBzht7XhE3LVYOwPgPEEYjkHw4lf0C3J_6Jg/exec" />
   </div>
@@ -14,21 +17,20 @@ title: Contact Us
 
   ### Office Location
 
-  <router-link to="/pages/contact/" tag="a" class="maplink">
-
-  <ImageFill class="mapimage" src="//unsplash.it/1920/800?image=768">
-
-  <span class="address">
+  <a href="https://www.google.com/maps/place/AZTemi/@50.2712985,8.6468855,17z/data=!3m1!4b1!4m5!3m4!1s0x47bd07bb198cb27f:0x9c7506d387202ddf!8m2!3d50.2712951!4d8.6490742" class="maplink">
 
   **AZTemi**\
-  <span class="size_l5" v-html="tr('businessAddress')"></span>
+  <span class="size_l4" v-html="tr('businessAddress')"></span>
 
-  </span>
+  </a>
 
-  </ImageFill>
+  <a href="https://www.google.com/maps/place/AZTemi/@50.2712985,8.6468855,17z/data=!3m1!4b1!4m5!3m4!1s0x47bd07bb198cb27f:0x9c7506d387202ddf!8m2!3d50.2712951!4d8.6490742" class="maplink">
 
-  </router-link>
+  <!-- ![](/img/map.png) -->
 
+  <ImageFill class="imgslide" src="/img/map.png" size="contain" />
+
+  </a>
 
   </div>
   </div>
@@ -38,33 +40,22 @@ title: Contact Us
 <style lang="stylus">
 
 #md_contact_index
+  width: 100%
   .cards
     @media $mq_desktop
-      --card-width: 45%
+      --card-width: 50%
   .map
     .maplink
-      display: block
-      padding: 1rem 0
-      .mapimage
-        position: relative
-        height: 25rem
-        .address
-          background-color: white
-          padding: 0.5rem 1rem
-          position: absolute
-          top: 20%
-          left: 40%
-          transform: translateX(-100%)
-          color: black
-          border-radius: 0.5rem
-          line-height: 1rem
-          &::after
-            position: absolute
-            top: 50%
-            left: 100%
-            transform: translateY(-50%)
-            color: white
-            $mx_arrow(1rem, left)
+      color: currentColor
+      margin: 0
+      img
+        width: 100%
+        max-height: 25rem
+      .imgslide
+        width: 100%
+        height: 15rem
+        @media $mq_tablet
+          height: 25rem
 
 
 </style>

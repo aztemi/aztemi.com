@@ -1,7 +1,7 @@
 <template>
   <div id="site" class="site" :class="{site_theme_dark: isDarkTheme}" :dark=isDarkTheme>
     <div class="site_wrapper">
-      <nav id="site_nav" class="site_nav sticky" :class="{sticky: enableSticky, slideInDown2: enableSticky}">
+      <nav class="site_nav sticky">
         <div class="section_wrapper">
           <Navbar />
           <Sidebar />
@@ -57,41 +57,21 @@ import CookieNotice from "@theme/components/CookieNotice.vue"
 export default {
   components: { Navbar, Sidebar, Footer, FooterTop, CookieNotice },
 
-  data() {
-    return {
-      enableSticky: false,
-      navbarPosY: 0
-    }
-  },
-  mounted() {
-    var site_nav = document.getElementById('site_nav')
-    if (site_nav) this.navbarPosY = site_nav.offsetTop
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', this.handleScroll)
-    }
-  },
   beforeDestroy () {
     this.$themeConfig.custom.VuexStore.dispatch('SET_IsSidenavOpen', false)
-    if (typeof window !== 'undefined') {
-      window.removeEventListener('scroll', this.handleScroll)
-    }
   },
   computed: {
     isDarkTheme() {
       return this.$themeConfig.custom.VuexStore.getters.getIsDarkTheme
     }
   },
-  methods: {
-    handleScroll() {
-      var site_nav = document.getElementById("site_nav")
-      if (site_nav)
-        this.enableSticky = (window.pageYOffset >= this.navbarPosY)
-    }
-  },
 };
 </script>
 
 <style lang="stylus">
+
+@import "../styles/colorTheme"
+@import "../styles/base.styl"
 
 .site
   .site_wrapper
@@ -118,9 +98,6 @@ export default {
       position: relative
       i
         font-size: $fs_l
-    .site_nav_top
-      background-color: var(--color_primary_variant)
-      color: var(--color_on_primary)
     .site_nav
       background-color: var(--color_secondary)
       color: var(--color_on_secondary)
@@ -132,7 +109,7 @@ export default {
         position: fixed
         top: 0
         & + .site_main
-          margin-top: 4rem
+          margin-top: 3.5rem
           // margin-top: 19rem
       a
         font-weight: 700
@@ -141,6 +118,8 @@ export default {
       background-color: var(--color_background)
       a, .link
         color: var(--color_secondary)
+      .logo
+        font-family: var(--font_face_logo)
     .site_footer_top
       background-color: var(--color_primary_variant)
       color: var(--color_on_primary_variant)

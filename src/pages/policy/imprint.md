@@ -13,7 +13,7 @@ Koepperner Str. 28, \
 Germany.
 
 **Contact Email:** \
-webmaster [at] aztemi.com or use our [Contact Form](/pages/contact/).
+webmaster[at]aztemi.com or use our [Contact Form](/pages/contact/).
 
 **Owner:** \
 Temitope Akinbosoye

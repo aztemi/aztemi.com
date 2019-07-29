@@ -159,12 +159,14 @@ export default {
     button
       border: 0
       width: 90%
+      background-color: var(--color_secondary)
       @media $mq_tablet
         width: auto
     .error_msg
       color: var(--color_ng_border)
       padding: 0
     .required
-      color: var(--color_ng_border)
+      color: var(--color_secondary)
+      font-weight: 700
 
 </style>

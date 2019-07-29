@@ -1,10 +1,9 @@
 # Site Settings
 name: AZTemi
 url: www.aztemi.com
-favicon: /icons/favicon.png
 timezone: UTC
 disqus_shortname:
-google_analytics:
+google_analytics: UA-144765452-1
 github: https://github.com/t4top/
 
 # feeds

@@ -42,7 +42,7 @@ export default {
     },
     autoPlayInterval: {
       type: Number,
-      default: 10000
+      default: 15000
     },
     slidesTagName: {
       type: String,
@@ -151,8 +151,8 @@ export default {
 <style lang="stylus">
 
 .carousel
-  --color_carousel_primary: var(--color_on_primary)
-  --color_carousel_dot: var(--color_inactive)
+  --color_carousel_primary: var(--color_accent)
+  --color_carousel_dot: var(--color_on_primary_variant)
   --color_carousel_dot_active: var(--color_accent)
   color: var(--color_carousel_primary)
   position: relative

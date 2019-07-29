@@ -1,5 +1,5 @@
 <template>
-  <div class="imagefill" v-if="src" :style="{ backgroundImage: 'url(' + src + ')' }">
+  <div class="imagefill" v-if="src" :style="{ backgroundImage: 'url(' + src + ')', backgroundSize: size }">
     <span class="overlay" :style="{ backgroundColor: overlayColor }" v-if="overlayColor.toLowerCase() != 'transparent'" />
     <slot />
   </div>
@@ -11,6 +11,10 @@ export default {
     src: {
       type: String,
       required: true
+    },
+    size: {
+      type: String,
+      default: 'cover'
     },
     overlayColor: {
       default: 'transparent'
@@ -25,8 +29,7 @@ export default {
 .imagefill
   position: relative
   background-repeat: no-repeat
-  background-position: center
-  background-size: cover
+  background-position: left
   display: inline-block
   width: 100%
   .overlay

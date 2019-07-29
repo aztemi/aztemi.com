@@ -99,6 +99,9 @@ function addGlobalMixin(Vue) {
       var getCanonicalUrl = function() {
         return vm.$themeConfig.custom.siteSettings.url + vm.$page.regularPath
       }
+      var getPageImage = function() { // Todo
+        return vm.$themeConfig.custom.siteSettings.url + '/android-icon-192x192.png'
+      }
       return {
         title: getPageTitle(),
         htmlAttrs: {
@@ -117,12 +120,12 @@ function addGlobalMixin(Vue) {
           { 'property': 'og:url', 'content': getCanonicalUrl() },
           { 'property': 'og:title', 'content': getPageTitle() },
           { 'property': 'og:description', 'content': getPageDescription() },
-          { 'property': 'og:image', 'content': '' }, // Todo
-          { 'property': 'og:updated_time', 'content': '' }, // Todo
+          { 'property': 'og:image', 'content': getPageImage() },
+          { 'property': 'og:updated_time', 'content': this.$page.lastUpdated }, // Todo
           { 'property': 'twitter:card', 'content': 'summary' },
           { 'property': 'twitter:title', 'content': getPageTitle() },
           { 'property': 'twitter:description', 'content': getPageDescription() },
-          { 'property': 'twitter:image', 'content': '' }, // Todo
+          { 'property': 'twitter:image', 'content': getPageImage() },
         ]
       }
     },
