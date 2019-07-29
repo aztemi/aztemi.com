@@ -1,7 +1,7 @@
 <template>
   <div class="cookienotice" v-if="!cookieAccepted">
     <span class="cookie_msg">This website uses cookies to ensure you get the best experience on our website. You can see our <router-link to="/pages/policy/privacy" tag="a">{{ tr('policy.privacy') }}</router-link> for more details.</span>
-    <span class="cookie_btn"><span class="accent_btn" @click="acceptCookiePolicy()">Got it!</span></span>
+    <span class="cookie_btn"><button class="accent_btn" @click.prevent="acceptCookiePolicy()">Got it!</button></span>
   </div>
 </template>
 
@@ -22,6 +22,7 @@ export default {
     acceptCookiePolicy() {
       this.cookieAccepted = true
       this.$themeConfig.custom.Store.set('cookieAccepted', true)
+      return false
     }
   }
 }
