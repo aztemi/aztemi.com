@@ -1,7 +1,7 @@
 <template>
   <div class="navbar">
     <span class="logo">
-      <router-link to="/" tag="span">AZTemi</router-link>
+      <router-link to="/" tag="a">AZTemi</router-link>
     </span>
     <ul>
       <template v-for="(menu, index) in sideMenu">
@@ -37,9 +37,11 @@ export default {
   align-items: center
   justify-content: space-between
   .logo
-    cursor: pointer
     font-size: $fs_xxl
     font-family: var(--font_face_logo)
+    a
+      color: currentColor
+      font-weight: normal !important
   ul
     text-transform: uppercase
     display: none
