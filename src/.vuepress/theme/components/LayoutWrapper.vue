@@ -118,8 +118,6 @@ export default {
       background-color: var(--color_background)
       a, .link
         color: var(--color_secondary)
-      .logo
-        font-family: var(--font_face_logo)
     .site_footer_top
       background-color: var(--color_primary_variant)
       color: var(--color_on_primary_variant)
