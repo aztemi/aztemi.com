@@ -15,7 +15,7 @@ export default {
   components: { LayoutWrapper },
   computed: {
     topImage() {
-      return this.$page.frontmatter.coverimage || '//unsplash.it/1920/800?image=768'
+      return this.$page.frontmatter.coverimage || 'https://picsum.photos/id/768/1400/800'
     }
   },
 }
@@ -27,9 +27,11 @@ export default {
 .content_wrapper
   position: relative
   width: 100%
-  margin-top: 20rem
+  margin-top: 15rem
   @media $mq_desktop
     margin-top: 25rem
+  @media $mq_short
+    margin-top: 8rem
   .topimg
     background-color: var(--color_primary_variant)
     width: 100%

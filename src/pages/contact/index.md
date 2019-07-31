@@ -1,7 +1,6 @@
 ---
 layout: LayoutContact
 title: Contact Us
-coverimage: //unsplash.it/1920/800?image=3
 ---
 
 ## Get in Touch

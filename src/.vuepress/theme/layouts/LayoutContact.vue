@@ -1,7 +1,7 @@
 <template>
   <LayoutWrapper>
     <div class="content_wrapper">
-      <ImageFill class="topimg" src="//unsplash.it/1920/800?image=767"> <!-- overlayColor="rgba(201, 182, 167, 0.3)" -->
+      <ImageFill class="topimg" src="/img/melinda-gimpel-5Ne6mMQtIdo-unsplash.jpg"> <!-- overlayColor="rgba(201, 182, 167, 0.3)" -->
       </ImageFill>
       <Content class="theme_content" />
     </div>
@@ -22,9 +22,11 @@ export default {
 .content_wrapper
   position: relative
   width: 100%
-  margin-top: 20rem
+  margin-top: 15rem
   @media $mq_desktop
     margin-top: 25rem
+  @media $mq_short
+    margin-top: 8rem
   .topimg
     background-color: var(--color_primary_variant)
     width: 100%

@@ -17,10 +17,9 @@
     <div class="card social">
       <ul>
         <h4 class="title">{{ tr('menu.follow') }}</h4>
-        <router-link to="" tag="a"><i class="fa fa-twitter" /></router-link>
-        <router-link to="" tag="a"><i class="fa fa-facebook-official" /></router-link>
-        <router-link to="" tag="a"><i class="fa fa-linkedin-square" /></router-link>
-        <a href="mailto:?to=webmaster[at]aztemi.com"><i class="fa fa-envelope-o" /></a>
+        <a href="https://fb.me/aztemi.company" title="Follow Us on Facebook" target="_blank"><i class="fa fa-facebook-square"></i></a>
+        <a href="https://www.linkedin.com/company/aztemi" title="Follow Us on LinkedIn" target="_blank"><i class="fa fa-linkedin-square" /></a>
+        <a href="mailto:?to=webmaster[at]aztemi.com" title="Email" target="_blank"><i class="fa fa-envelope-o" /></a>
       </ul>
     </div>
   </div>

@@ -43,7 +43,8 @@ module.exports = ctx => ({
     ['link', { rel: 'alternate', href: siteSettings.feed.rss, type: 'application/rss+xml', title: siteSettings.url } ],
     ['link', { rel: 'alternate', href: siteSettings.feed.atom, type: 'application/atom+xml', title: siteSettings.url } ],
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Kelly+Slab|Montserrat:400,700|Roboto+Slab:400,700|Material+Icons' }],
-    ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' }],
+    ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css' }],
+    ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/v4-shims.min.css' }],
   ],
 
   themeConfig: {

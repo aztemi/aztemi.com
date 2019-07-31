@@ -1,6 +1,7 @@
 ---
 layout:
 title: Impressum
+coverimage: https://picsum.photos/id/403/1400/800?grayscale
 ---
 ### Impressum
 
@@ -18,8 +19,8 @@ webmaster[at]aztemi.com or use our [Contact Form](/pages/contact/).
 **Owner:** \
 Temitope Akinbosoye
 
-**Tax Number:** \
-03 801 34783
+**Tax ID Number:** \
+DE324813949
 
 **Responsible Tax Authority:** \
 Finanzamt Bad Homburg v. d. Höhe \

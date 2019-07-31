@@ -38,36 +38,36 @@ export default {
     return {
       slides: [
         {
-          img: '//unsplash.it/1920/800?image=767',
+          img: 'https://picsum.photos/id/378/1400/800?grayscale',
           title: 'State-of-the-art Software Consulting',
-          caption: 'Simple but powerful solutions geared towards boosting the performances of your businesses'
+          caption: 'Simple but powerful solutions geared towards boosting the performance of your business'
         },
         {
-          img: '//unsplash.it/1920/800?image=768',
+          img: 'https://picsum.photos/id/304/1400/800?grayscale',
           title: 'Hands-on Project Management Approach',
           caption: 'Working directly with your developers brings unparalleled perspectives to PM methodology and tracking'
         },
         {
-          img: '//unsplash.it/1920/800?image=769',
-          title: 'Software Design and Development, Reimagined.',
+          img: 'https://picsum.photos/id/1033/1400/800?grayscale',
+          title: 'Software Design and Development, Reimagined',
           caption: 'Complete Development Lifecycle using latest technologies to accelerate projects deployment and time to market'
         },
       ],
       cards: [
         {
-          link: '/pages/services',
+          link: '/pages/services/#our-services',
           icon: 'fa-object-group',
           title: 'Tailored Services',
           caption: 'Empowering you and your teams to achieve more through the solutions and major services we offer. These include Software Consulting, Project Management, Software Architectural Design and Development.',
         },
         {
-          link: '/pages/services',
+          link: '/pages/services/#target-sectors',
           icon: 'fa-sitemap',
           title: 'Target Sectors',
-          caption: 'Multiple years of software development experience give us exposure to several industries. Our projects are in automotive In-Vehicle Infotainment (IVI), FinTech, Online solutions and internet of things (IoT).',
+          caption: 'Multiple years of software development experience give us exposure to several industries. Our projects extend to Automotive, FinTech, Online solutions and Internet of Things (IoT) sectors.',
         },
         {
-          link: '/pages/services',
+          link: '/pages/services/#technologies',
           icon: 'fa-cogs',
           title: 'Technologies',
           caption: 'We work like you do. By using similar technologies and toolchains that your teams already know and love, we can get to business smoothly with lower onboarding effort.',
@@ -97,6 +97,7 @@ export default {
       text-align: center
       padding: 0 3rem
       color: var(--color_background)
+      text-shadow: 0.1rem 0.1rem var(--color_secondary)
       @media $mq_desktop
         text-align: left
       .slide_title

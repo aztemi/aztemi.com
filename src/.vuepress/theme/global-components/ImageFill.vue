@@ -29,7 +29,7 @@ export default {
 .imagefill
   position: relative
   background-repeat: no-repeat
-  background-position: left
+  background-position: center
   display: inline-block
   width: 100%
   .overlay

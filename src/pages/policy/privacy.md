@@ -1,13 +1,8 @@
 ---
 layout:
 title: Our Policies
-coverimage: //unsplash.it/1920/800?image=769
+coverimage: https://picsum.photos/id/208/1400/800?grayscale
 ---
-
-### Contact Us
-
-If you have any questions or suggestions regarding our Privacy Policy, please contact us at \
-webmaster[at]aztemi.com or use our [Contact Form](/pages/contact/).
 
 ### Privacy Policy
 
@@ -30,3 +25,7 @@ By using this website, you agree to the processing of the data about you in the 
 ### Terms of Service
 
 The website and all contents offered through this website are provided on an “as is” basis without warranties of any kind either express or implied. AZTemi.com and its authors expressly disclaim all liability with respect to actions taken or not taken based upon the information contained herein or with respect to any errors or omissions in such information.
+
+### Contact Us
+
+If you have any questions or suggestions regarding our Privacy Policy, please contact us at webmaster[at]aztemi.com or use our [Contact Form](/pages/contact/).

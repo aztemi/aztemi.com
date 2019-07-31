@@ -42,7 +42,7 @@ export default {
     },
     autoPlayInterval: {
       type: Number,
-      default: 15000
+      default: 20000
     },
     slidesTagName: {
       type: String,

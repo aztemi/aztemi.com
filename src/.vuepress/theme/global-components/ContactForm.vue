@@ -24,7 +24,7 @@
             <input id="karaspace" name="karaspace" type="text" placeholder="Keep this field empty" />
         </div>
         <div>
-            <button class="accent_btn size_l4" type="submit" @click="sendForm($event)" :disabled="formDisabled">Get in touch</button>
+            <button class="accent_btn size_l4" type="submit" @click="sendForm($event)" :disabled="formDisabled">Send</button>
         </div>
     </form>
     <div v-if="responseSuccess">
