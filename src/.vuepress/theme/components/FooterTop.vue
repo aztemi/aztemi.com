@@ -35,6 +35,7 @@ export default {
 <style lang="stylus">
 
 .footer_top_wrapper
+  background-color: var(--color_primary_variant)
   padding: 1rem 0
   .card
     padding: 0

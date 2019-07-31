@@ -11,7 +11,10 @@
         </ImageFill>
       </div>
     </Carousel>
-    <h3 class="catchPhrase">Bridge the gap between your software ideas and realization</h3>
+    <div class="catchphrase">
+      <h3 class="catchphrase_caption">Bridge the gap between your software ideas and realization</h3>
+      <router-link to="/pages/contact/" tag="a" class="catchphrase_link">Contact Us</router-link>
+    </div>
     <div class="cards">
       <div v-for="(card, index) in cards" :key="index" class="card speaciality">
         <i class="round_icon fa" :class="card.icon" />
@@ -36,53 +39,43 @@ export default {
       slides: [
         {
           img: '//unsplash.it/1920/800?image=767',
-          title: 'Software Consulting Made Simple',
-          caption: 'Simple but powerful steps towards state-of-the-art software solutions. Trans'
+          title: 'State-of-the-art Software Consulting',
+          caption: 'Simple but powerful solutions geared towards boosting the performances of your businesses'
         },
         {
           img: '//unsplash.it/1920/800?image=768',
-          title: 'Best in Class Processes',
-          caption: 'Software Project Management with Agile methodogy and tracking. Transform your business, become a key player in the digital world'
+          title: 'Hands-on Project Management Approach',
+          caption: 'Working directly with your developers brings unparalleled perspectives to PM methodology and tracking'
         },
         {
           img: '//unsplash.it/1920/800?image=769',
           title: 'Software Design and Development, Reimagined.',
-          caption: 'Complete Software Lifecycle Development, Over 12 years in the industry brings unparallel, unique experience'
+          caption: 'Complete Development Lifecycle using latest technologies to accelerate projects deployment and time to market'
         },
       ],
       cards: [
         {
           link: '/pages/services',
           icon: 'fa-object-group',
-          title: 'Solutions & Services',
+          title: 'Tailored Services',
           caption: 'Empowering you and your teams to achieve more through the solutions and major services we offer. These include Software Consulting, Project Management, Software Architectural Design and Development.',
         },
         {
           link: '/pages/services',
           icon: 'fa-sitemap',
-          title: 'Sectors & Segments',
-          caption: 'Multiple years of software development experience give us exposure to several industries. Our projects are in automotive in-vehicle infotainment (IVI), FinTech, Online solutions and internet of things (IoT).',
+          title: 'Target Sectors',
+          caption: 'Multiple years of software development experience give us exposure to several industries. Our projects are in automotive In-Vehicle Infotainment (IVI), FinTech, Online solutions and internet of things (IoT).',
         },
         {
           link: '/pages/services',
           icon: 'fa-cogs',
-          title: 'Specialities & Setups',
+          title: 'Technologies',
           caption: 'We work like you do. By using similar technologies and toolchains that your teams already know and love, we can get to business smoothly with lower onboarding effort.',
         },
       ]
     }
   },
 }
-
-/*
-  Empowering you to achieve more
-
-  Bridge the gap between your software ideas and realization
-
-
-
-
-*/
 
 </script>
 
@@ -96,9 +89,9 @@ export default {
     display: flex
     align-items: center
     justify-content: center
-    min-height: 20rem
+    height: 20rem
     @media $mq_desktop
-      min-height: 25rem
+      height: 25rem
       justify-content: flex-start
     .slideCaption
       text-align: center
@@ -119,12 +112,20 @@ export default {
         width: 40%
         height: 1px
 
-.catchPhrase
+.catchphrase
   display: block
   padding: 1rem
   text-align: center
-  text-transform: uppercase
-  font-weight: 500
+  .catchphrase_caption
+    text-transform: uppercase
+    font-weight: 500
+  a.catchphrase_link
+    display: inline-block
+    margin-top: 1.5rem
+    font-size: $fs_l
+    padding: 0.5rem 3rem
+    border: 1px solid currentColor
+    border-radius: 0.4rem
 
 .cards
   padding: 0.8rem
@@ -132,7 +133,7 @@ export default {
     text-align: center
     padding: 3rem 2rem
     border: solid 1px rgba(144, 144, 144, 0.25)
-    border-radius: 6px
+    border-radius: 0.4rem
     @media $mq_tablet
       --card-margin: 1rem
       --card-width: 50%
@@ -156,6 +157,6 @@ export default {
       background: var(--color_secondary)
       border-radius: 100%
       box-shadow: 0 0 0 0.8rem var(--color_on_secondary), 0 0 0 0.9rem var(--color_secondary)
-      margin: 0 0 1.25em 0
+      margin: 0 0 1.25rem 0
 
 </style>

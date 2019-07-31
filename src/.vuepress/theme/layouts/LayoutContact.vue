@@ -1,7 +1,7 @@
 <template>
   <LayoutWrapper>
     <div class="content_wrapper">
-      <ImageFill class="topimg" :src="topImage">
+      <ImageFill class="topimg" src="//unsplash.it/1920/800?image=767"> <!-- overlayColor="rgba(201, 182, 167, 0.3)" -->
       </ImageFill>
       <Content class="theme_content" />
     </div>
@@ -13,11 +13,6 @@ import LayoutWrapper from '@theme/components/LayoutWrapper.vue'
 
 export default {
   components: { LayoutWrapper },
-  computed: {
-    topImage() {
-      return this.$page.frontmatter.coverimage || '//unsplash.it/1920/800?image=768'
-    }
-  },
 }
 </script>
 

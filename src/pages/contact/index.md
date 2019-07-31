@@ -1,6 +1,7 @@
 ---
-layout: LayoutCopy
+layout: LayoutContact
 title: Contact Us
+coverimage: //unsplash.it/1920/800?image=3
 ---
 
 ## Get in Touch
@@ -25,8 +26,6 @@ title: Contact Us
   </a>
 
   <a href="https://www.google.com/maps/place/AZTemi/@50.2712985,8.6468855,17z/data=!3m1!4b1!4m5!3m4!1s0x47bd07bb198cb27f:0x9c7506d387202ddf!8m2!3d50.2712951!4d8.6490742" class="maplink">
-
-  <!-- ![](/img/map.png) -->
 
   <ImageFill class="imgslide" src="/img/map.png" size="contain" />
 

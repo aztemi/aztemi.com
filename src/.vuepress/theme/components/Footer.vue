@@ -12,6 +12,7 @@ export default {
 <style lang="stylus" scoped>
 
 div
+  background-color: var(--color_primary)
   padding: 1rem 2rem
 
 </style>
