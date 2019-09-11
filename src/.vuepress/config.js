@@ -29,6 +29,8 @@ module.exports = ctx => ({
   extend: '@vuepress/theme-default',
   dest: 'build',
 
+  title: siteSettings.name,
+
   head: [
     ['meta', {'http-equiv': 'X-UA-Compatible', content: 'IE=Edge,chrome=1'}],
     ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-icon-180x180.png' }],
