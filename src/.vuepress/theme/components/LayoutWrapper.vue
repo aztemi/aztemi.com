@@ -24,26 +24,6 @@
         </div>
       </footer>
     </div>
-
-    <div style="width:95%;font-size:1rem" class="invisible">
-      Test All Routes. $localePath = {{$localePath}},  $lang = {{$lang}}
-      <ul>
-        <router-link
-          v-for="page in this.$site.pages"
-          :key="page.key"
-          :to="page.regularPath"
-          tag="li"
-        >
-          <span class="btn">
-            {{ (page.title || '') + ', Path: ' + page.path
-            + ', regularPath: ' + page.regularPath
-              + ', relativePath: ' + page.relativePath
-              + ', Lang: ' + page.lang }}
-          </span>
-        </router-link>
-      </ul>
-    </div>
-
   </div>
 </template>
 
