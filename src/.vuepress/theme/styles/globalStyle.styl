@@ -1,0 +1,38 @@
+// Global CSS Variables in Stylus
+// It is included globally in config.js
+
+$site_max_width = 120rem
+
+// Small screens first media query breakpoints
+$mq_watch = "screen and (min-width: 250px)"
+$mq_mobile = "screen and (min-width: 480px)"
+$mq_tablet = "screen and (min-width: 620px)"
+$mq_desktop = "screen and (min-width: 992px)"
+$mq_wide = "screen and (min-width: 1262px)"
+$mq_extrawide = "screen and (min-width: 2562px)"
+// based on height
+$mq_short = "screen and (max-height: 500px)"
+
+// font sizes
+$fs_xxl = 3rem
+$fs_xl = 2.1rem
+$fs_l = 1.5rem
+$fs_m = 1rem
+$fs_s = 0.8rem
+
+// font families
+$ff_courier = "Courier New", Courier, monospace
+$ff_kellyslab = 'Kelly Slab', cursive
+$ff_monserrat = 'Montserrat', sans-serif
+$ff_robotoslab = 'Roboto Slab', serif
+$ff_helvetica = 'Helvetica Neue', Helvetica, Arial, sans-serif
+
+// mixins
+$mx_arrow(width, position = null)
+  content: ''
+  display: inline-block
+  width: 0
+  height: 0
+  border: width solid transparent
+  if position is not null
+    border-{position}-color: currentColor

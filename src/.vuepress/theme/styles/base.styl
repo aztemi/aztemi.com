@@ -1,0 +1,116 @@
+
+:root
+  --font_face_default: $ff_helvetica
+  --font_face_logo: $ff_kellyslab
+  --font_face_header: $ff_robotoslab
+
+*, *::before, *::after
+  box-sizing: border-box
+  margin: 0
+
+html, body
+  height: 100%
+  margin: 0
+  font-size: calc(var(--site_font_size, 15) * 1px)
+  @media $mq_mobile
+    --site_font_size: 16
+  @media $mq_tablet
+    --site_font_size: 17
+  @media $mq_desktop
+    --site_font_size: 18
+  @media $mq_wide
+    --site_font_size: 19
+  @media $mq_extrawide
+    --site_font_size: 20
+
+html
+  scroll-behavior: smooth
+  @media screen and (prefers-reduced-motion: reduce)
+    scroll-behavior: auto
+
+body
+  width: 100%
+
+a
+  text-decoration: none
+
+ol, ul
+  list-style-type: none
+
+h1, h2, h3, h4, h5, h6
+  font-weight: 700
+
+.size_l1, h1
+  font-size: $fs_xxl
+
+.size_l2, h2
+  font-size: $fs_xl
+
+.size_l3, h3
+  font-size: $fs_l
+
+.size_l4, h4
+  font-size: $fs_m
+
+.size_l5, h5, h6
+  font-size: $fs_s
+
+.hidden, .invisible
+  display: none
+
+.visible
+  display: block
+
+.btn, .flat_btn
+  cursor: pointer
+  padding: 0.5rem 1rem
+  text-align: center
+  display: flex
+  align-items: center
+
+.btn
+  &:hover, &:focus
+    background-color: var(--color_background_hover)
+  &:active
+    border: 1px solid var(--color_background_hover)
+
+.accent_btn
+  cursor: pointer
+  padding: 0.5rem 3rem
+  text-align: center
+  background-color: var(--color_accent)
+  color: var(--color_on_accent)
+  border-radius: 0.5rem
+  &:hover, &:focus
+    background-color: var(--color_accent_hover)
+
+.cards
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  .card
+    flex: 1
+    display: inline-block
+    margin: var(--card-margin, 1rem 0)
+    flex-basis: calc(var(--card-width, 100%) - (var(--card-margin, 1rem) * 2))
+
+
+// animations
+.slideInUp
+  animation: slideInUp 500ms linear
+
+@keyframes slideInUp {
+  from { transform: translate(0, 100%) }
+  to { transform: translate(0, 0) }
+}
+
+.slideInDown
+  animation: slideInDown 500ms linear
+
+@keyframes slideInDown {
+  from { transform: translate(0, -100%) }
+  to { transform: translate(0, 0) }
+}
+
+.go-to-top
+  display: block !important
