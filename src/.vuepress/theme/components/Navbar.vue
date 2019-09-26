@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar">
+  <div class="top_navbar">
     <span class="logo">
       <router-link to="/" tag="a">AZTemi</router-link>
     </span>
@@ -30,7 +30,7 @@ export default {
 
 <style lang="stylus">
 
-.navbar
+.top_navbar
   padding: 0 1rem
   text-align: left
   display: flex

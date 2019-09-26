@@ -26,7 +26,6 @@ let gCustom = {
 
 // Usual VuePress entry point
 module.exports = ctx => ({
-  extend: '@vuepress/theme-default',
   dest: 'build',
 
   title: siteSettings.name,
