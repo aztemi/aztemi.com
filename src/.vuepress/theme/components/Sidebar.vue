@@ -1,5 +1,5 @@
 <template>
-  <div class="navmenu" :class="{sidebar_open: isSideNavOpen}">
+  <div class="sidebar" :class="{sidebar_open: isSideNavOpen}">
     <ul>
       <template v-for="(menu, index) in sideMenu">
         <li :key="index">
@@ -26,7 +26,7 @@ export default {
 
 <style lang="stylus">
 
-.navmenu
+.sidebar
   position: relative
   transform: scale(1, 0)
   transform-origin: top
