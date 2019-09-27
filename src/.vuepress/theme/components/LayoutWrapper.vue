@@ -37,6 +37,11 @@ import CookieNotice from "@theme/components/CookieNotice.vue"
 export default {
   components: { Navbar, Sidebar, Footer, FooterTop, CookieNotice },
 
+  mounted() {
+    this.$router.afterEach(() => {
+      this.$themeConfig.custom.VuexStore.dispatch('SET_IsSidenavOpen', false)
+    });
+  },
   beforeDestroy () {
     this.$themeConfig.custom.VuexStore.dispatch('SET_IsSidenavOpen', false)
   },

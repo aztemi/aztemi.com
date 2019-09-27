@@ -7,18 +7,14 @@
 <script>
 
 export default {
-  data() {
-    return {
-      isSideNavOpen: false
+  computed: {
+    isSideNavOpen() {
+      return this.$themeConfig.custom.VuexStore.getters.getIsSidenavOpen
     }
-  },
-  mounted() {
-    this.isSideNavOpen = this.$themeConfig.custom.VuexStore.getters.getIsSidenavOpen
   },
   methods: {
     toggleSidenavOpen() {
-      this.isSideNavOpen = !this.isSideNavOpen
-      this.$themeConfig.custom.VuexStore.dispatch('SET_IsSidenavOpen', this.isSideNavOpen)
+      this.$themeConfig.custom.VuexStore.dispatch('SET_IsSidenavOpen', !this.isSideNavOpen)
     }
   }
 };
