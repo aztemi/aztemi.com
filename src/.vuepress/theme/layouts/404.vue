@@ -1,6 +1,6 @@
 <template>
   <LayoutWrapper>
-    <div class="content_wrapper">
+    <div class="wrapper_404">
       <h1>404</h1>
       <blockquote>{{ getMsg() }}</blockquote>
       <router-link to="/">Take me home</router-link>.
@@ -33,7 +33,7 @@ export default {
 
 <style lang="stylus">
 
-.content_wrapper
+.wrapper_404
   padding: 2rem
   text-align: center
 
