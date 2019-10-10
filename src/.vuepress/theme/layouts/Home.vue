@@ -12,14 +12,14 @@
       </div>
     </Carousel>
     <div class="catchphrase">
-      <h3 class="catchphrase_caption">Bridge the gap between your software ideas and realization</h3>
+      <h3 class="catchphrase_caption">Bridge the gap between your software ideas and their implementation</h3>
       <router-link to="/pages/contact/" tag="a" class="catchphrase_link">Contact Us</router-link>
     </div>
     <div class="cards">
       <div v-for="(card, index) in cards" :key="index" class="card speaciality">
         <i class="round_icon fa" :class="card.icon" />
         <h3>{{ card.title }}</h3>
-        <p>{{ card.caption }}</p>
+        <p v-html="card.caption"></p>
         <router-link :to="card.link" tag="a" class="more_link">Learn More</router-link>
       </div>
     </div>
@@ -57,20 +57,20 @@ export default {
         {
           link: '/pages/services/#our-services',
           icon: 'fa-object-group',
-          title: 'Tailored Services',
-          caption: 'Empowering you and your teams to achieve more through the solutions and major services we offer. These include Software Consulting, Project Management, Software Architectural Design and Development.',
+          title: 'What We Offer',
+          caption: 'Our services include <b>Software Consulting</b>, <b>Project Management</b>, <b>Software Architectural Design</b>, <b>Software Development</b> and <b>Offshore Outsourcing</b>.',
         },
         {
           link: '/pages/services/#target-sectors',
           icon: 'fa-sitemap',
-          title: 'Target Sectors',
-          caption: 'Multiple years of software development experience give us exposure to several industries. Our projects extend to Automotive, FinTech, Online solutions and Internet of Things (IoT) sectors.',
+          title: 'Sectors We Serve',
+          caption: 'Our solutions and expertise span multiple industries including, but not limited to, <b>IT</b>, <b>Automotive</b>, <b>FinTech</b>, <b>IoT</b>, <b>E-commerce</b>, <b>Outsourcing</b> and <b>Web Design</b>.',
         },
         {
           link: '/pages/services/#technologies',
           icon: 'fa-cogs',
-          title: 'Technologies',
-          caption: 'We work like you do. By using similar technologies and toolchains that your teams already know and love, we can get to business smoothly with lower onboarding effort.',
+          title: 'Technologies We Use',
+          caption: 'We employ <b>Agile</b> development principles and modern toolchains, most of which are <b>open source</b>. These include <b>Qt</b>, <b>Hypervisor</b>, <b>LAMP Stack</b>, <b>JAMstack</b>, <b>PWA</b>, <b>CMS</b> and many more.',
         },
       ]
     }

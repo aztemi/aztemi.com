@@ -2,8 +2,8 @@
   <div class="sidebar" :class="{sidebar_open: isSideNavOpen}">
     <ul>
       <template v-for="(menu, index) in sideMenu">
-        <li :key="index">
-          <router-link :to="menu.link" tag="a" class="btn">{{ tr(menu.text) }}</router-link>
+        <li>
+          <router-link :to="menu.link" tag="a" class="btn" :key="index">{{ tr(menu.text) }}</router-link>
         </li>
       </template>
     </ul>

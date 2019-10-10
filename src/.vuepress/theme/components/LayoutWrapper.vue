@@ -24,26 +24,6 @@
         </div>
       </footer>
     </div>
-
-    <div style="width:95%;font-size:1rem" class="invisible">
-      Test All Routes. $localePath = {{$localePath}},  $lang = {{$lang}}
-      <ul>
-        <router-link
-          v-for="page in this.$site.pages"
-          :key="page.key"
-          :to="page.regularPath"
-          tag="li"
-        >
-          <span class="btn">
-            {{ (page.title || '') + ', Path: ' + page.path
-            + ', regularPath: ' + page.regularPath
-              + ', relativePath: ' + page.relativePath
-              + ', Lang: ' + page.lang }}
-          </span>
-        </router-link>
-      </ul>
-    </div>
-
   </div>
 </template>
 
@@ -57,6 +37,11 @@ import CookieNotice from "@theme/components/CookieNotice.vue"
 export default {
   components: { Navbar, Sidebar, Footer, FooterTop, CookieNotice },
 
+  mounted() {
+    this.$router.afterEach(() => {
+      this.$themeConfig.custom.VuexStore.dispatch('SET_IsSidenavOpen', false)
+    });
+  },
   beforeDestroy () {
     this.$themeConfig.custom.VuexStore.dispatch('SET_IsSidenavOpen', false)
   },

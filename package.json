@@ -30,12 +30,10 @@
     "vue-i18n": "^8.11.2",
     "vue-meta": "^2.0.4",
     "@vuepress/plugin-nprogress": "next",
-    "@vuepress/plugin-last-updated": "next",
     "@vuepress/plugin-back-to-top": "next",
     "@vuepress/plugin-pwa": "next",
     "@vuepress/plugin-medium-zoom": "next",
     "@vuepress/plugin-google-analytics": "next",
-    "@vuepress/plugin-blog": "latest",
     "vuepress": "next",
     "vuex": "^3.1.1"
   },
