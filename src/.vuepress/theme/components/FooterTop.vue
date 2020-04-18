@@ -19,7 +19,7 @@
         <h4 class="title">{{ tr('menu.follow') }}</h4>
         <a href="https://fb.me/aztemi.company" title="Follow Us on Facebook" target="_blank"><i class="fa fa-facebook-square"></i></a>
         <a href="https://www.linkedin.com/company/aztemi" title="Follow Us on LinkedIn" target="_blank"><i class="fa fa-linkedin-square" /></a>
-        <a href="mailto:?to=webmaster[at]aztemi.com" title="Email" target="_blank"><i class="fa fa-envelope-o" /></a>
+        <a href="https://twitter.com/AZTemiOfficial" title="Follow Us on Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
       </ul>
     </div>
   </div>

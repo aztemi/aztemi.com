@@ -26,7 +26,6 @@ let gCustom = {
 
 // Usual VuePress entry point
 module.exports = ctx => ({
-  extend: '@vuepress/theme-default',
   dest: 'build',
 
   title: siteSettings.name,
@@ -66,7 +65,6 @@ module.exports = ctx => ({
 
   plugins: [
     ['@vuepress/nprogress', true],
-    ['@vuepress/last-updated', true],
     ['@vuepress/back-to-top', true],
     ['@vuepress/pwa', {
       serviceWorker: true,
@@ -77,44 +75,6 @@ module.exports = ctx => ({
     }],
     ['@vuepress/google-analytics', {
       'ga': siteSettings.google_analytics
-    }],
-    ['@vuepress/blog', {
-      directories: [
-        {
-          id: 'post',
-          dirname: 'posts',
-          path: '/post/',
-          itemPermalink: '/post/:slug',
-          itemlayout: 'Page',
-          pagination: {
-            perPagePosts: 2,
-          },
-        },
-      ],
-      frontmatters: [
-        {
-          id: "tag",
-          keys: ['tag', 'tags'],
-          path: '/tag/',
-          layout: 'Tags',
-          frontmatter: { title: 'Tag' },
-          itemlayout: 'Tag',
-          pagination: {
-            perPagePosts: 3
-          }
-        },
-        {
-          id: "category",
-          keys: ['category', 'categories'],
-          path: '/category/',
-          layout: 'Categories',
-          frontmatter: { title: 'Category' },
-          itemlayout: 'Category',
-          pagination: {
-            perPagePosts: 3
-          }
-        },
-      ]
     }],
   ]
 })

@@ -8,17 +8,22 @@ coverimage: https://picsum.photos/id/180/1400/800?grayscale
 
 ### Our Services
 
-Empowering you and your teams to achieve more through the solutions and major services we offer. At AZTemi, we believe in providing value-added software solutions to our customers. From requirements analysis to deployment, we work closely with our customers to meet their project objectives with main focus on delivering consistent, great quality work within planned schedule. Our primary areas of expertise include
+Empowering you to achieve more through the solutions and major services we offer. At AZTemi, we believe in providing value-added software solutions to our clients. From requirements analysis to deployment, we work closely with your teams to meet their project objectives with main focus on delivering consistent, great quality work within planned schedule. Our primary areas of expertise include
 
 (1) Software Consulting
 
-(2) Software Project Management
+(2) Project Management
 
-(3) Software Architectural Design and Development
+(3) Software Architectural Design
+
+(4) Software Development
+
+(5) Offshore Outsourcing
+
 
 ### Target Sectors
 
-Multiple years of software development experience give us exposure to several industries. Our projects are in Automotive In-Vehicle Infotainment (IVI), Financial Technology (FinTech), Online Web Solutions and Internet of Things (IoT).
+Multiple years of software development experience give us exposure to several industries including, but not limited to, Information Technology (IT), Automotive, Financial Technology (FinTech), Internet of Things (IoT), E-commerce and Online Web Solutions.
 
 ### Technologies
 
