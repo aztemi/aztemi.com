@@ -1,0 +1,31 @@
+name: DeployToFirebase
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  main:
+    name: Build and deploy
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@master
+
+    - name: Install dependencies
+      run: |
+        sudo npm install -g firebase-tools
+        yarn
+
+    - name: Build
+      run: yarn build
+
+    - name: Deploy
+      env:
+        FIREBASE_TOKEN: ${{ secrets.AZTEMI_FIREBASE_TOKEN }}
+        CI_PIPELINE_ID: ${{ github.run_id }}
+        CI_JOB_ID: ${{ github.job }}
+        CI_COMMIT_SHORT_SHA: ${{ github.sha }}
+      run: firebase deploy -P default --non-interactive --token "$FIREBASE_TOKEN" -m "Pipeline $CI_PIPELINE_ID, job $CI_JOB_ID, commit $CI_COMMIT_SHORT_SHA"
