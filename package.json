@@ -1,6 +1,6 @@
 {
   "name": "aztemi.com",
-  "version": "0.1.0",
+  "version": "1.1.0",
   "description": "Website of AZTemi built with VuePress",
   "scripts": {
     "dev": "vuepress dev src",
@@ -9,35 +9,34 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/t4top/aztemi-com.git"
+    "url": "git+https://github.com/aztemi/aztemi.com.git"
   },
   "keywords": [
-    "vuepress",
     "AZTemi",
     "aztemi.com"
   ],
-  "author": "t4top (https://github.com/t4top)",
+  "author": "aztemi (https://github.com/aztemi)",
   "license": "AGPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/t4top/aztemi-com/issues"
+    "url": "https://github.com/aztemi/aztemi.com/issues"
   },
-  "homepage": "https://github.com/t4top/aztemi-com",
+  "homepage": "https://github.com/aztemi/aztemi.com",
   "dependencies": {
-    "@types/js-yaml": "^3.12.1",
-    "@types/store": "^2.0.2",
-    "js-yaml": "^3.13.1",
     "store": "^2.0.12",
-    "vue-i18n": "^8.11.2",
-    "vue-meta": "^2.0.4",
-    "@vuepress/plugin-nprogress": "next",
-    "@vuepress/plugin-back-to-top": "next",
-    "@vuepress/plugin-pwa": "next",
-    "@vuepress/plugin-medium-zoom": "next",
-    "@vuepress/plugin-google-analytics": "next",
-    "vuepress": "next",
-    "vuex": "^3.1.1"
+    "vue-i18n": "^8.17.1",
+    "vue-meta": "^2.3.3",
+    "vuepress": "^1.4.1",
+    "vuex": "^3.1.3"
   },
   "devDependencies": {
-    "http-server": "^0.11.1"
+    "@types/js-yaml": "^3.12.3",
+    "@types/store": "^2.0.2",
+    "@vuepress/plugin-back-to-top": "^1.4.1",
+    "@vuepress/plugin-google-analytics": "^1.4.1",
+    "@vuepress/plugin-medium-zoom": "^1.4.1",
+    "@vuepress/plugin-nprogress": "^1.4.1",
+    "@vuepress/plugin-pwa": "^1.4.1",
+    "http-server": "^0.12.1",
+    "js-yaml": "^3.13.1"
   }
 }
