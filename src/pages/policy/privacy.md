@@ -1,7 +1,7 @@
 ---
 layout:
 title: Our Policies
-coverimage: https://picsum.photos/id/208/1400/800?grayscale
+coverimage: /img/picsum/208-1400x800-grayscale.jpg
 ---
 
 ### Privacy Policy

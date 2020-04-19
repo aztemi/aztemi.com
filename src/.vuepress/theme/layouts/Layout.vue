@@ -15,7 +15,7 @@ export default {
   components: { LayoutWrapper },
   computed: {
     topImage() {
-      return this.$page.frontmatter.coverimage || 'https://picsum.photos/id/768/1400/800'
+      return this.$page.frontmatter.coverimage || '/img/picsum/516-1400x800.jpg'
     }
   },
 }

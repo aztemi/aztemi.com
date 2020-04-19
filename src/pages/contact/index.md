@@ -1,7 +1,7 @@
 ---
 layout:
 title: Contact Us
-coverimage: /img/melinda-gimpel-5Ne6mMQtIdo-unsplash.jpg
+coverimage: /img/unsplash/melinda-gimpel-5Ne6mMQtIdo.jpg
 ---
 
 ## Get in Touch
