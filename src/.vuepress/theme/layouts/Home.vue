@@ -38,17 +38,17 @@ export default {
     return {
       slides: [
         {
-          img: 'https://picsum.photos/id/378/1400/800?grayscale',
+          img: '/img/picsum/378-1400x800-grayscale.jpg',
           title: 'State-of-the-art Software Consulting',
           caption: 'Simple but powerful solutions geared towards boosting the performance of your business'
         },
         {
-          img: 'https://picsum.photos/id/304/1400/800?grayscale',
+          img: '/img/picsum/304-1400x800-grayscale.jpg',
           title: 'Hands-on Project Management Approach',
           caption: 'Working directly with your developers brings unparalleled perspectives to PM methodology and tracking'
         },
         {
-          img: 'https://picsum.photos/id/1033/1400/800?grayscale',
+          img: '/img/picsum/1033-1400x800-grayscale.jpg',
           title: 'Software Design and Development, Reimagined',
           caption: 'Complete Development Lifecycle using latest technologies to accelerate projects deployment and time to market'
         },

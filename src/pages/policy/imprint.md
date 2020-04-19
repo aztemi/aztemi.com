@@ -1,7 +1,7 @@
 ---
 layout:
 title: Impressum
-coverimage: https://picsum.photos/id/403/1400/800?grayscale
+coverimage: /img/picsum/403-1400x800-grayscale.jpg
 ---
 ### Impressum
 

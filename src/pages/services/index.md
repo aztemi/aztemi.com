@@ -1,7 +1,7 @@
 ---
 title: Our Services
 layout:
-coverimage: https://picsum.photos/id/180/1400/800?grayscale
+coverimage: /img/picsum/180-1400x800-grayscale.jpg
 ---
 
 ## Solutions
