@@ -21,19 +21,25 @@
         </div>
         <div class="hidden">
             <label for="karaspace">Keep this field empty</label>
-            <input id="karaspace" name="karaspace" type="text" placeholder="Keep this field empty" />
+            <input id="karaspace" name="karaspace" type="text" value="" placeholder="Keep this field empty" />
+            <input id="recaptcha" name="recaptcha" type="hidden" />
         </div>
         <div>
-            <button class="accent_btn size_l4" type="submit" @click="sendForm($event)" :disabled="formDisabled">Send</button>
+            <button class="accent_btn size_l4" type="submit" @click="sendForm($event)" :disabled="formDisabled">Send Message</button>
+        </div>
+        <div class="recaptcha_text_badge">
+            This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.
         </div>
     </form>
-    <div v-if="responseSuccess">
-      <p id="thanks_msg">Thanks a lot for your message.</p>
+    <div v-else>
+        <p id="thanks_msg">Thanks a lot for your message.</p>
     </div>
   </section>
 </template>
 
 <script>
+var RECAPTCHA_SITE_KEY = "6Le_a8cZAAAAAFpQ5Cp9tRDvz7NMYOh8-dW-ltNw"
+
 export default {
   props: {
     action: {
@@ -55,71 +61,88 @@ export default {
     this.responseSuccess = false
   },
 
+  created() {
+    this.$nextTick(() => { this.loadRecaptchaJS() })
+  },
+
   methods: {
+    loadRecaptchaJS() {
+      var js = document.createElement("script")
+      js.type = "text/javascript"
+      js.src = `https://www.recaptcha.net/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`
+      document.body.appendChild(js)
+    },
     sendForm(e) {
       var xhr = this.createHttpRequest(this.method, this.action)
       if (xhr) {
-        var form = this.$refs['contactform_ref']
+        var form = this.$refs["contactform_ref"]
         if (form && this.validateInputData()) {
-          var fd = new FormData(form)
           var vm = this
-          xhr.onreadystatechange = function() {
-            if (xhr.readyState == 4 && xhr.status == 200) {
-              vm.formDisabled = false
-              var resp = JSON.parse(xhr.responseText)
-              console.log('Resp: ', resp)
-              if ("failed" == resp["result"]) {
-                vm.handleErrorInput(form, resp["wrong"])
-              } else if ("success" == resp["result"]) {
-                console.log('Success')
-                vm.responseSuccess = true
-              } else {}
+          vm.readyRecaptcha().then(function(token) {
+            var recaptcha = document.getElementById("recaptcha")
+            if (recaptcha) recaptcha.value = token
+            var fd = new FormData(form)
+            xhr.onreadystatechange = function() {
+              if ((4 === xhr.readyState) && (200 === xhr.status)) {
+                vm.formDisabled = false
+                var resp = JSON.parse(xhr.responseText)
+                if (resp.success) vm.responseSuccess = true
+                else vm.handleErrorInput(form, resp.wrong)
+              }
             }
-          }
-          this.formDisabled = true
-          xhr.send(fd)
+            vm.formDisabled = true
+            xhr.send(fd)
+          })
         }
         e.preventDefault()
       }
     },
+    readyRecaptcha() {
+      return new Promise(function(resolve) {
+        grecaptcha.ready(function() {
+          grecaptcha.execute(RECAPTCHA_SITE_KEY, {action: "homepage"})
+            .then(function(token) { resolve(token) })
+            .catch(function() { /* ignore */ })
+        })
+      })
+    },
     validateInputData() {
       var rtn = true
       var wrong_items = []
-      var form = this.$refs['contactform_ref']
+      var form = this.$refs["contactform_ref"]
 
       if (form) {
         var sName = form["name"].value.trim()
         if ("" === sName) {
-          wrong_items.push("name");
-          rtn = false;
+          wrong_items.push("name")
+          rtn = false
         }
         var sMessage = form["message"].value.trim()
         if ("" === sMessage) {
-          wrong_items.push("message");
-          rtn = false;
+          wrong_items.push("message")
+          rtn = false
         }
         var sEmail = form["email"].value.trim()
         if (("" === sEmail) || (!this.isValidEmail(sEmail))) {
-          wrong_items.push("email");
-          rtn = false;
+          wrong_items.push("email")
+          rtn = false
         }
 
-        if (!rtn) this.handleErrorInput(form, wrong_items);
+        if (!rtn) this.handleErrorInput(form, wrong_items)
       }
 
       return rtn
     },
     isValidEmail(email) {
-      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i;
-      return re.test(email);
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i
+      return re.test(email)
     },
     handleErrorInput(form, items) {
       for (var pos in items) {
-        if (form[items[pos]]) form[items[pos]].classList.add('input_error')
+        if (form[items[pos]]) form[items[pos]].classList.add("input_error")
       }
     }
   }
-
 
 }
 </script>
@@ -168,5 +191,11 @@ export default {
     .required
       color: var(--color_secondary)
       font-weight: 700
+    .recaptcha_text_badge
+      font-size: 0.7rem
+      padding: 0
+.grecaptcha-badge
+  visibility: hidden
+  display: none
 
 </style>
