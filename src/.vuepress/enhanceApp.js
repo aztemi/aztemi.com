@@ -73,7 +73,7 @@ function addGlobalMixin(Vue) {
         var xhr = new XMLHttpRequest()
         if ("withCredentials" in xhr) {
           xhr.open(method, action, true)
-        } else if (typeof XDomainRequest != "undefined") {
+        } else if (typeof XDomainRequest !== "undefined") {
           // for IE
           xhr = new XDomainRequest()
           xhr.open(method, action)
@@ -81,7 +81,7 @@ function addGlobalMixin(Vue) {
           // CORS not supported
           xhr = null
         }
-        return xhr;
+        return xhr
       }
     },
     metaInfo() {
