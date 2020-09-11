@@ -23,7 +23,7 @@ coverimage: /img/unsplash/melinda-gimpel-5Ne6mMQtIdo.jpg
   **AZTemi**\
   <span class="size_l4" v-html="tr('businessAddress')"></span>
 
-  <ImageFill class="imgslide" src="/img/map.png" size="contain" />
+  <ImageFill class="imgslide" src="/img/map.png" />
 
   </a>
 
