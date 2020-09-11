@@ -28,7 +28,8 @@
             <button class="accent_btn size_l4" type="submit" @click="sendForm($event)" :disabled="formDisabled">Send Message</button>
         </div>
         <div class="recaptcha_text_badge">
-            This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.
+            This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+            and <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer">Terms of Service</a> apply.
         </div>
     </form>
     <div v-else>
