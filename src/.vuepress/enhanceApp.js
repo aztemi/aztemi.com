@@ -13,6 +13,11 @@ export default ({
   Vue.use(Vuex)
   Vue.use(VueMeta, { refreshOnceOnNavigation: true })
 
+  // add route redirects
+  router.addRoutes([
+    { path: '/pages/policy/', redirect: '/pages/policy/privacy.html' }
+  ])
+
   // Add more functions to our custom global variable in themeConfig
   updateCustomVariable(siteData)
 

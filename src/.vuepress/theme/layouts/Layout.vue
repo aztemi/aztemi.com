@@ -1,8 +1,7 @@
 <template>
   <LayoutWrapper>
     <div class="content_wrapper">
-      <ImageFill class="topimg" :src="topImage">
-      </ImageFill>
+      <ImageFill class="topimg" :src="topImage" />
       <Content class="theme_content" />
     </div>
   </LayoutWrapper>

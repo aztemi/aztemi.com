@@ -178,12 +178,14 @@ export default {
   .prev, .next
     position: absolute
     top: 50%
-    padding: 1rem
+    padding: 2rem
     transform: translateY(-50%)
   .prev
     left: 0
+    padding-left: 1 rem
   .next
     right: 0
+    padding-right: 1 rem
   .autoplay
     position: absolute
     bottom: 0

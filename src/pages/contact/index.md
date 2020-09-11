@@ -18,16 +18,12 @@ coverimage: /img/unsplash/melinda-gimpel-5Ne6mMQtIdo.jpg
 
   ### Office Location
 
-  <a href="https://www.google.com/maps/place/AZTemi/@50.2712985,8.6468855,17z/data=!3m1!4b1!4m5!3m4!1s0x47bd07bb198cb27f:0x9c7506d387202ddf!8m2!3d50.2712951!4d8.6490742" class="maplink">
+  <a href="https://www.google.com/maps/place/AZTemi/@50.2712985,8.6468855,17z/data=!3m1!4b1!4m5!3m4!1s0x47bd07bb198cb27f:0x9c7506d387202ddf!8m2!3d50.2712951!4d8.6490742" class="maplink" target="_blank" rel="noopener noreferrer">
 
   **AZTemi**\
   <span class="size_l4" v-html="tr('businessAddress')"></span>
 
-  </a>
-
-  <a href="https://www.google.com/maps/place/AZTemi/@50.2712985,8.6468855,17z/data=!3m1!4b1!4m5!3m4!1s0x47bd07bb198cb27f:0x9c7506d387202ddf!8m2!3d50.2712951!4d8.6490742" class="maplink">
-
-  <ImageFill class="imgslide" src="/img/map.png" size="contain" />
+  <ImageFill class="imgslide" src="/img/map.png" />
 
   </a>
 
