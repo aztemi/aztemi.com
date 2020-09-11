@@ -70,9 +70,6 @@ module.exports = ctx => ({
       serviceWorker: true,
       updatePopup: true
     }],
-    ['@vuepress/medium-zoom', {
-      selector: 'img.medium_zoom'
-    }],
     ['@vuepress/google-analytics', {
       'ga': siteSettings.google_analytics
     }],
