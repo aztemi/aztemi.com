@@ -9,14 +9,12 @@
 export default {
   data() {
     return {
-      cookieAccepted: false
+      cookieAccepted: true
     }
   },
   mounted() {
     let Store = this.$themeConfig.custom.Store
     this.cookieAccepted = (typeof Store.get('cookieAccepted') === "undefined") ? false : Store.get('cookieAccepted')
-    // ToDo. Remove below line. Only for testing purpose
-    // this.cookieAccepted = false
   },
   methods: {
     acceptCookiePolicy() {
