@@ -67,14 +67,6 @@ export default {
     min-height: 100vh
     display: flex
     flex-direction: column
-    justify-content: space-around
-    .cookienotice
-      font-size: $fs_s
-      z-index: 100
-      position: fixed
-      bottom: 0
-      width: 100%
-      max-width: $site_max_width
     .section_wrapper
       max-width: $site_max_width
       margin: 0 auto
@@ -95,11 +87,9 @@ export default {
         top: 0
         & + .site_main
           margin-top: 3.5rem
-          // margin-top: 19rem
       a
         font-weight: 700
     .site_main
-      flex: 1
       background-color: var(--color_background)
       a, .link
         color: var(--color_secondary)
@@ -111,5 +101,17 @@ export default {
     .site_footer
       background-color: var(--color_primary)
       color: var(--color_on_primary)
+    .cookienotice
+      font-size: $fs_s
+      z-index: 100
+      position: fixed
+      bottom: 0
+      width: 100%
+      @media $mq_tablet
+        max-width: $site_max_width
+        width: 50%
+        left: 50%
+        transform: translateX(-50%)
+        border-radius: 1rem 1rem 0 0
 
 </style>
