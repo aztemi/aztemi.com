@@ -61,7 +61,7 @@ export default {
     this.responseSuccess = false
   },
 
-  created() {
+  mounted() {
     this.$nextTick(() => { this.loadRecaptchaJS() })
   },
 
